@@ -1,5 +1,19 @@
 import '../scss/main.scss';
 
-/* place your code below */
+const loadButton = document.querySelector(".load");
+const saveButton = document.querySelector(".save");
 
-console.log('HELLO 🚀')
+saveButton.addEventListener("click",(e)=>{
+    const note = document.querySelector(".note");
+    localStorage.setItem("note",note.value);
+})
+
+loadButton.addEventListener("click",(e)=>{
+    const note = document.querySelector(".note");
+
+    var savedNote = localStorage.getItem("note");
+
+    if(savedNote){
+        note.value=savedNote;
+    }
+})

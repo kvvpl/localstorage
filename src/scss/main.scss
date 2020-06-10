@@ -1,13 +1,25 @@
 @import "~normalize.css";
 
-@import "_variables";
-@import "modules/hello.scss";
+html{
+  box-sizing: border-box;
+}
+
+*, *::after, *::before{
+  box-sizing: inherit;
+}
+
 
 body {
-  background: $wtf;
+  background: #2e2248;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+}
+
+
+.form{
+  max-width: 600px;
+  width: 100%;
 }
